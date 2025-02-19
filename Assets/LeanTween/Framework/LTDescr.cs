@@ -972,6 +972,10 @@ public class LTDescr
 			dt = LeanTween.dtManual;
 		}
 
+		if(this.delay>0f){
+			this.delay -= dt;
+		}
+
 //		Debug.Log ("tween:" + this+ " dt:"+dt);
 		if(this.delay<=0f && directionLocal!=0f){
 			if(trans==null)
@@ -1010,8 +1014,6 @@ public class LTDescr
 
 				return isTweenFinished;
 			}
-		}else{
-			this.delay -= dt;
 		}
 
 		return false;
