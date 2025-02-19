@@ -974,6 +974,9 @@ public class LTDescr
 
 		if(this.delay>0f){
 			this.delay -= dt;
+			if (this.delay <= 0f) 
+				// the actual delta time that "passed" should be
+				dt = -this.delay; 
 		}
 
 //		Debug.Log ("tween:" + this+ " dt:"+dt);
